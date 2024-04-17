@@ -7,6 +7,8 @@ import Signup from './Conponement/Signup'
 import Signin from './Conponement/Signin'
 import Dashboard from './Conponement/Dashboard'
 import { Toaster } from 'react-hot-toast';
+import Counter from './Conponement/Counter'
+import Upload from './Conponement/Upload'
 
 const App = () => {
   const token = localStorage.getItem("token");
@@ -19,6 +21,8 @@ const App = () => {
       <Route path="/Signoutpage" element={<Signoutpage/>} />
       <Route path="/Signinpage" element={<Signinpage/>} />
       <Route path="/Signin" element={<Signin/>} />
+      <Route path="/Counter" element={<Counter/>} />
+      <Route path="/Upload" element={<Upload/>} />
       <Route path="/Signup" element={<Signup/>} />
       <Route path="/Dashboard" element={token ? <Dashboard/> : <Navigate to="/Signin" />} />
       <Route path="/" element={<Fetch/>} />
